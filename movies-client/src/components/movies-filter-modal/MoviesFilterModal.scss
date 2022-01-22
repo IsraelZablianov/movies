@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+
+.Movies-Filter-Modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    .Filter-Content {
+        width: 50%;
+        height: 50%;
+        background: $white;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        .Filters {
+            flex: 1;
+
+            .Filter {
+                .Title {
+                    margin-bottom: 10px;
+                }
+
+                .Options {
+                    border: 1px solid $black;
+                    border-radius: 3px;
+                    padding: 10px;
+                    margin-bottom: 20px;
+
+                    .Checkbox-List {
+                        display: flex;
+                        text-transform: capitalize;
+
+                        .Checkbox {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        button {
+            align-self: center;
+            width: 100px;
+            height: 35px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    }
+}

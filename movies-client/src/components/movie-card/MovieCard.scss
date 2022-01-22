@@ -1,0 +1,55 @@
+@import '../../styles/variables.scss';
+
+.Movie {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 260px;
+    margin-bottom: 50px;
+
+
+    img, .Title, .Rating, Button {
+        flex: 1;
+        text-align: left;
+        color: $black;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+    }
+
+    Button {
+        flex-grow: 0;
+    }
+
+    .Title {
+        font: normal normal normal 30px/31px Georgia;
+        letter-spacing: -0.6px;
+    }
+
+    .Rating {
+        display: flex;
+        text-align: left;
+        font: normal normal normal 18px Arial;
+        letter-spacing: -0.5px;
+        align-items: flex-end;
+
+        .Star {
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+        }
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+        width: 144px;
+
+        .Title {
+            font: normal normal normal 20px/21px Georgia;
+            letter-spacing: -0.4px;
+        }
+
+        .Rating {
+            letter-spacing: -0.4px;
+        }
+    }
+}

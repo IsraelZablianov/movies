@@ -1,0 +1,133 @@
+@import '../../styles/variables.scss';
+
+$desktop-panel-width: 450px;
+$mobile-panel-width: 300px;
+
+.Movie-Details-Modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    .Panel {
+        width: $desktop-panel-width;
+    }
+
+    .Movie-Details {
+        display: flex;
+        background-color: $white;
+        padding: 20px;
+        max-width: 90%;
+
+        .Image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Details-Container {
+            display: flex;
+            flex-direction: column;
+
+            .Details {
+                flex: 3;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                .Title {
+                    font: normal normal bold 30px Arial;
+                    color: $black;
+                    text-transform: uppercase;
+                }
+
+                .Synopsis {
+                    font: normal normal normal 18px Georgia;
+                    letter-spacing: -0.6px;
+                    color: $black;
+                }
+
+                .Rating {
+                    font: normal normal normal 18px Arial;
+                    display: flex;
+                    align-items: center;
+                    line-height: 1;
+
+                    svg {
+                        width: 28px;
+                        height: 26px;
+                        margin-right: 5px;
+                    }
+                }
+    
+            }
+
+            .Go-Back-Button {
+                flex: 2;
+                align-items: flex-end;
+                display: flex;
+
+                Button {
+                    width: 260px;
+                    display: flex;
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+
+        .Panel {
+            width: $mobile-panel-width;
+            max-height: 50vh;
+            overflow: auto;
+        }
+
+        .Image {
+            img {
+                width: 100%;
+            }
+        }
+
+        .Movie-Details {
+            flex-direction: column;
+
+            .Details-Container {
+                .Details {
+                    .Title, .Synopsis, .Rating, .Go-Back-Button {
+                        margin: 10px 0;
+                    }
+
+                    .Title {
+                        font: normal normal bold 25px Arial;
+                    }
+
+                    .Synopsis {
+                        font: normal normal normal 14px Georgia;
+                    }
+
+                    .Rating {
+                        font: normal normal normal 15px Arial;
+                        height: 20px;
+                        line-height: 1.5;
+
+                        svg {
+                            height: 20px;
+                            width: 20px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+                .Go-Back-Button {
+                    Button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

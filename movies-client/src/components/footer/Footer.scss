@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+
+footer {
+   background-color: #231F20;
+   min-height: 250px;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   
+   .Container {
+      text-align: center;
+   }
+
+   svg {
+      circle {
+         fill: $main !important;
+      }
+   }
+
+   .Contact-Us {
+      text-align: center;
+      font: normal normal normal 33px/37px Georgia;
+      color: $white;
+   }
+
+   .Support {
+      text-align: center;
+      font: normal normal normal 16px/21px Georgia;
+      color: $white;
+   }
+
+   .Share-Icons {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      svg {
+         flex: 1;
+      }
+   }
+
+   svg, .Contact-Us, .Support, .Share-Icons {
+      flex: 1 1;
+      margin-top: 10px;
+   }
+}

@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.Button {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+
+    border: 1px solid $black;
+    border-radius: 100px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}

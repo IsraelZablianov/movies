@@ -1,0 +1,49 @@
+@import '../../styles/variables.scss';
+
+header {
+   background-color: $white;
+   border-bottom: 1px solid black;
+   min-height: 125px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   img {
+      margin-left: 20px;
+   }
+
+   .Mobile-Logo {
+      display: none;
+   }
+
+   .Filter-Button {
+      width: 100px;
+      height: 35px;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 20px;
+   }
+
+   .Search-Options {
+      display: flex;
+      align-items: center;
+   }
+
+   @media screen and (max-width: $mobile-breakpoint) {
+      min-height: 80px;
+
+      .Desktop-Logo {
+         display: none;
+      }
+
+      .Mobile-Logo {
+         display: block;
+      }
+
+      .Filter-Button {
+         display: none;
+      }
+  }
+}
